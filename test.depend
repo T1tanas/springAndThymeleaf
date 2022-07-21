@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1605549811 source:c:\users\titas\documents\test\main.cpp
+	<iostream>
+	<fstream>
+

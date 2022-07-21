@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 th:text="${nameris}">Alternatyva</h2>
+
+<p th:text="${listSize}"></p>
+<table border="1" style="width:300px">
+    <tr>
+        <th>Test Name</th>
+        <th>Power</th>
+    </tr>
+    <tr th:each="task : ${data}">
+        <td th:text="${task.name}">A Smoke Test'</td>
+        <td th:text="${task.Power}">A Smoke Test'</td>
+        <td > <button>delete</button></td>
+    </tr>
+</table>
+
+<p><a href="/task"> Add me </a></p>
+<form action="#" th:action="@{/addTask}" th:object="${task}" method="post">
+    <label> name:</label><br>
+    <input type="text" th:field="*{name}"><br>
+    <label> power:</label><br>
+    <input type="text" th:field="*{Power}"><br>
+
+
+    <p> <input type="submit" value="Submit"></p>
+</form>
+
+</body>
+</html>
