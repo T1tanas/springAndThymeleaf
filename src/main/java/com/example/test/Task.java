@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Indexed;
 import org.springframework.stereotype.Service;
 
+import java.beans.Transient;
 import java.util.Date;
 import java.util.UUID;
 
@@ -12,6 +13,7 @@ import java.util.UUID;
 public class Task {
 
 
+    private UUID corrId = UUID.randomUUID();
     private String name;
     private int Power;
 
@@ -29,8 +31,13 @@ public class Task {
     }
 
 
+    public UUID getCorrId() {
+        return corrId;
+    }
 
-
+    public void setCorrId(UUID corrId) {
+        this.corrId = corrId;
+    }
 
     public Task() {
 

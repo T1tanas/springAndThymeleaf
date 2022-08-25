@@ -16,7 +16,7 @@
     <tr th:each="task : ${data}">
         <td th:text="${task.name}">A Smoke Test'</td>
         <td th:text="${task.Power}">A Smoke Test'</td>
-        <td > <button>delete</button></td>
+        <td > <a th:href="@{/delete(taskID=${task.corrId})}">delete</a></td>
     </tr>
 </table>
 
